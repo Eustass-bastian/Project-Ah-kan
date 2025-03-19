@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Doner";
+  src: url("fonts/Doner.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Doner Bold";
+  src: url("fonts/Doner-BoldDisplay.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #0057b7; /* Deep ocean blue */
+  --accent-color: #ffffff;
+  --text-color: #ffffff;
+  --dark-blue: #003a7a;
+  --light-blue: #4c99e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-border {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.coming-soon {
+  text-align: center;
+}
+
+.coming-soon h1 {
+  font-family: "Doner Bold", sans-serif;
+  font-size: 6rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  padding-top: 4rem;
+}
+
+.logo-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 374px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  font-family: "Doner", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border-left: 5px solid white;
+  padding-left: 20px;
+}
+
+.tagline p {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .coming-soon h1 {
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    padding-top: 2rem;
+  }
+
+  .logo img {
+    width: 200px;
+  }
+
+  .tagline {
+    border-left: 3px solid white;
+  }
+
+  .tagline p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .coming-soon h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .logo-tagline {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .logo img {
+    width: 180px;
+  }
+
+  .tagline {
+    border-left: none;
+    border-top: 2px solid white;
+    padding-left: 0;
+    padding-top: 20px;
+    align-items: left;
+  }
+
+  .tagline p {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .coming-soon h1 {
+    font-size: 2rem;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .tagline p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For landscape orientation on mobile */
+@media (max-height: 450px) and (orientation: landscape) {
+  .coming-soon h1 {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .tagline p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  #newsletter-form {
+    flex-direction: row;
+  }
+
+  #newsletter-form button {
+    width: auto;
+  }
+}
